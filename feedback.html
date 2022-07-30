@@ -1,0 +1,152 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Website</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+	<script src="https://kit.fontawesome.com/c427637c1e.js" crossorigin="anonymous"></script>
+<style>
+body {
+	background-color: #55ffe5;
+}
+h1{
+	margin-bottom: 10px;
+	color: #fff;
+}
+.container p {
+	margin-bottom: 10px;
+}
+button {
+	background: #1c00b5;
+	width: 100px;
+	border: none;
+	outline: none;
+	color: #fff;
+	height: 35px;
+	border-radius: 30px;
+	margin: 20px;
+	box-shadow: 0px 5px 15px 0px rgba(28,0,181,0.3);
+	cursor: pointer;
+}
+</style>
+</head>
+<body>
+<section class="header">
+	<nav>
+		<!--<a href="index.html"><img src="img/mybg.png"></a>-->
+		<div class="nav-links" id="navLinks">
+		<i class=fa-thin fa-bars" onclick="hideMenu()"></i>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="interest.html">Interest</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="feedback.html">Feedback</a></li>
+			</ul>
+		</div>
+		<i class="fa-thin fa-xmark" onclick="showMenu()"></i>
+	</nav>
+	<div class="container">
+		<h1>Give your feedback</h1> 
+		<div class="feedback-box">
+			<div class="emoji">
+				<div id="emoji">
+					<img src="img/poor.png">
+					<img src="img/bad.png">
+					<img src="img/okay.png">
+					<img src="img/good.png">
+					<img src="img/excellent.png">
+				</div>
+			</div>
+			<div class="rating">
+				<i class="fa-solid fa-star"></i>
+				<i class="fa-solid fa-star"></i>
+				<i class="fa-solid fa-star"></i>
+				<i class="fa-solid fa-star"></i>
+				<i class="fa-solid fa-star"></i>
+			</div>
+		</div>
+		<h1>What your favourite text editor</h1>
+		<label class="container">Visual Studio Code
+		  <input type="checkbox" checked="checked">
+		  <span class="checkmark"></span>
+		</label>
+		<label class="container">Notepad++
+		  <input type="checkbox">
+		  <span class="checkmark"></span>
+		</label>
+		<label class="container">Sublime Text
+		  <input type="checkbox">
+		  <span class="checkmark"></span>
+		</label>
+		<label class="container">TextMate
+		  <input type="checkbox">
+		  <span class="checkmark"></span>
+		</label>
+		
+		<button type="submit" onclick="location.href='index.html'">SUBMIT</button>
+	</div>
+	
+	
+</section>
+
+<!------JavaScript for Toggle Menu------>
+<script>
+	var navLinks = document.getElementById("navLinks");
+	function showMenu() {
+		navLinks.style.right = "0";
+	}
+	function hideMenu() {
+		navLinks.style.right = "-200";
+	}
+	
+	var stars = document.getElementByClassName("fa-solid");
+	var emoji = document.getElementById("emoji");
+	
+		stars[0].onclick = function() {
+			stars[0].style.color = "#ffd93b";
+			stars[1].style.color = "#e4e4e4";
+			stars[2].style.color = "#e4e4e4";
+			stars[3].style.color = "#e4e4e4";
+			stars[4].style.color = "#e4e4e4";
+			emoji.style.transform ="translateX(0)";
+		}
+		stars[1].onclick = function() {
+			stars[0].style.color = "#ffd93b";
+			stars[1].style.color = "#ffd93b";
+			stars[2].style.color = "#e4e4e4";
+			stars[3].style.color = "#e4e4e4";
+			stars[4].style.color = "#e4e4e4";
+			emoji.style.transform ="translateX(-100)";
+		}
+		stars[2].onclick = function() {
+			stars[0].style.color = "#ffd93b";
+			stars[1].style.color = "#ffd93b";
+			stars[2].style.color = "#ffd93b";
+			stars[3].style.color = "#e4e4e4";
+			stars[4].style.color = "#e4e4e4";
+			emoji.style.transform ="translateX(-200)";
+		}
+		stars[3].onclick = function() {
+			stars[0].style.color = "#ffd93b";
+			stars[1].style.color = "#ffd93b";
+			stars[2].style.color = "#ffd93b";
+			stars[3].style.color = "#ffd93b";
+			stars[4].style.color = "#e4e4e4";
+			emoji.style.transform ="translateX(-300)";
+		}
+		stars[4].onclick = function() {
+			stars[0].style.color = "#ffd93b";
+			stars[1].style.color = "#ffd93b";
+			stars[2].style.color = "#ffd93b";
+			stars[3].style.color = "#ffd93b";
+			stars[4].style.color = "#ffd93b";
+			emoji.style.transform ="translateX(-400)";
+		}
+	
+</script>
+</body>
+</html>

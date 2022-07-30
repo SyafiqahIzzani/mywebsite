@@ -1,0 +1,118 @@
+<html>
+<head>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>About</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+	<script src="https://kit.fontawesome.com/c427637c1e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<section class="header">
+	<nav>
+		<!--<a href="index.html"><img src="img/mybg.png"></a>-->
+		<div class="nav-links" id="navLinks">
+		<i class=fa-thin fa-bars" onclick="hideMenu()"></i>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="interest.html">Interest</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="feedback.html">Feedback</a></li>
+			</ul>
+		</div>
+		<i class="fa-thin fa-xmark" onclick="showMenu()"></i>
+	</nav>
+	<div class="text-box2">
+		<h1>😎 My Biodata</h1>
+	</div>
+
+	<div class="table-box">
+		<div class="table-row table-head">
+			<div class="table-cell">
+			<p>About</p>
+			</div>
+			
+			<div class="table-cell">
+			<p>Description</p>
+			</div>
+		</div>
+		<div class="table-row">
+			<div class="table-cell left-cell">
+			<p>Full Name</p>
+			</div>
+			
+			<div class="table-cell last-cell left-cell">
+			<p>Nur Syafiqah Izzani binti Mohamad Farihan</p>
+			</div>
+		</div>
+		<div class="table-row">
+			<div class="table-cell left-cell">
+			<p>Date of Birth</p>
+			</div>
+			
+			<div class="table-cell last-cell left-cell">
+			<p>19th November 2002</p>
+			</div>
+		</div>
+		<div class="table-row">
+			<div class="table-cell left-cell">
+			<p>Father's Name</p>
+			</div>
+			
+			<div class="table-cell last-cell left-cell">
+			<p>Mohamad Farihan bin Hamid</p>
+			</div>
+		</div>
+		<div class="table-row">
+			<div class="table-cell left-cell">
+			<p>Mother's Name</p>
+			</div>
+			
+			<div class="table-cell last-cell left-cell">
+			<p>Chek Salmi binti Chek San</p>
+			</div>
+		</div>
+		<div class="table-row">
+			<div class="table-cell left-cell">
+			<p>Names of Siblings</p>
+			</div>
+			
+			<div class="table-cell last-cell left-cell">
+			<p><li>Nur Syahira Faqihah Binti Mohamad Farihan</li>
+				<li>Nur Syafiqah Izzani Binti Mohamad Farihan</li>
+				<li>Muhammad Arif Fawwaz Bin Mohamad Farihan</li>
+				<li>Muhammad Hanif Bin Mohamad Farihan</li>
+				<li>Muhammad Muadz Bin Mohamad Farihan</li>
+			</p>
+			</div>
+		</div>
+		<div class="table-row">
+			<div class="table-cell left-cell">
+			<p>Education</p>
+			</div>
+			
+			<div class="table-cell last-cell left-cell">
+			<p>Diploma in Computer Science</p>
+			</div>
+		</div>
+	</div>
+</section>
+<!------JavaScript for Toggle Menu------>
+<script>
+	var navLinks = document.getElementById("navLinks");
+	function showMenu() {
+		navLinks.style.right = "0";
+	}
+	function hideMenu() {
+		navLinks.style.right = "-200";
+	}
+	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Interest</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+	<script src="https://kit.fontawesome.com/c427637c1e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<section class="header">
+		<nav>
+		<!--<a href="index.html"><img src="img/mybg.png"></a>-->
+		<div class="nav-links" id="navLinks">
+		<i class=fa-thin fa-bars" onclick="hideMenu()"></i>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="interest.html">Interest</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="feedback.html">Feedback</a></li>
+			</ul>
+		</div>
+		<i class="fa-thin fa-xmark" onclick="showMenu()"></i>
+	</nav>
+		<<div class="text-box3">
+			<h1>❤️ My Interest</h1>
+		</div>
+		
+		<div class="table-box">
+			<div class="table-row table-head">
+				<div class="table-cell">
+				<p>FPS GAMES 🎮</p>
+				</div>
+				
+				<div class="table-cell">
+				<p>LISTEN TO MUSIC 🎼</p>
+				</div>
+			</div>
+			<div class="table-row">
+				<div class="table-cell left-cell">
+				<p>I interest to FPS games since childhood and  it's an excellent way to manage my mood</p>
+				</div>
+				
+				<div class="table-cell last-cell left-cell">
+				<p>When I listen to music it makes me happy and gave me a good mood</p>
+				</div>
+			</div>
+			<div class="table-row">
+				<div class="table-cell left-cell">
+				<p>
+					<li>Valorant</li><br>
+					<img src="img/valo1.jpg" width="300 height="680"><br><br>
+					<li>Counter-Strike: Global Offensive</li><br>
+					<img src="img/csgo1.jpg" width="300 height="680">
+				</p>
+				</div>
+				
+				<div class="table-cell last-cell left-cell">
+				<p>
+					<li>Spotify</li><br>
+					<img src="img/spotify.jpg" width="300 height="680"><br><br>
+					<li>Joox</li><br>
+					<img src="img/joox.jpg" width="300 height="680">
+				</p>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="left-col">
+				<h1>THE<br>BEST<br>SOUND</h1>
+			</div>
+			<div class="right-col">
+				<p>Click Here To Listen</p>
+				<img src="img/play.png" id="icon">
+			</div>
+		</div>
+		
+		<audio id="mySong">
+			<source src="img/STAY.mp3" type="audio/mp3">
+		</audio>
+	</section>
+	<!------JavaScript for Toggle Menu------>
+	<script>
+		var navLinks = document.getElementById("navLinks");
+		function showMenu() {
+			navLinks.style.right = "0";
+		}
+		function hideMenu() {
+			navLinks.style.right = "-200";
+		}
+		
+		var mySong = document.getElementById("mySong");
+		var icon = document.getElementById("icon");
+		
+		icon.onclick = function() {
+			if(mySong.paused) {
+				mySong.play();
+				icon.src = "img/pause.png";
+			}
+			else {
+				mySong.pause();
+				icon.src = "img/play.png";
+			}
+		}
+		
+	</script>
+
+</body>
+</html>

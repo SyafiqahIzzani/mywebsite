@@ -1,0 +1,122 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Website</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+	<script src="https://kit.fontawesome.com/c427637c1e.js" crossorigin="anonymous"></script>
+<style>
+body {
+	background-color: #55ffe5;
+}
+h1{
+	margin-bottom: 10px;
+}
+.container p {
+	margin-bottom: 10px;
+}
+</style>
+</head>
+
+<body>
+<section class="header">
+	<nav>
+		<!--<a href="index.html"><img src="img/mybg.png"></a>-->
+		<div class="nav-links" id="navLinks">
+		<i class=fa-thin fa-bars" onclick="hideMenu()"></i>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="interest.html">Interest</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="feedback.html">Feedback</a></li>
+			</ul>
+		</div>
+		<i class="fa-thin fa-xmark" onclick="showMenu()"></i>
+	</nav>
+	<div class="container">
+		<h1>Contact with us</h1>
+		<p>I would love to respond to your message.<br>Feel free to get in touch with me.</p> 
+	</div>
+	<div class="contact-box">
+		<div class="contact-left">
+			<h3>Send yout request</h3>
+			<form onsubmit="sendEmail(); reset(); return false;">
+				
+				<div class="input-row">
+					<div class="input-group">
+						<label>Name</label>
+						<input type="text" id="name" placeholder="Syafiqah Izzani" required>
+					</div>
+					<div class="input-group">
+						<label>Phone</label>
+						<input type="text" id="phone" placeholder="+60 17-5627257" required>
+					</div>
+				</div>
+				<div class="input-row">
+					<div class="input-group">
+						<label>Email</label>
+						<input type="email" id="email" placeholder="syafiqahizzani0211@gmail.com" required>
+					</div>
+				</div>
+				
+				<label>Message</label>
+				<textarea rows="5" id="message" placeholder="Your Message" required></textarea>
+				
+				<button type="submit">SEND</button>
+			</form>
+		</div>
+		<div class="contact-right">
+			<h3>Reach us</h3>
+			
+			<table>
+				<tr>
+					<td>Email</td>
+					<td>syafiqahizzani0211@gmail.com.com</td>
+				</tr>
+				<tr>
+					<td>Phone</td>
+					<td>+60 17-5627257</td>
+				</tr>
+				<tr>
+					<td>Address</td>
+					<td>No 93, Jalan Puteri Lagenda 4, Taman Puteri Lagenda, 08300 Gurun Kedah</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</section>
+
+<!------JavaScript for Toggle Menu------>
+<script src=" https://smtpjs.com/v3/smtp.js"></script>
+<script>
+	var navLinks = document.getElementById("navLinks");
+	function showMenu() {
+		navLinks.style.right = "0";
+	}
+	function hideMenu() {
+		navLinks.style.right = "-200";
+	}
+	function sendEmail() {
+		Email.send({
+			Host : "smtp.gmail.com",
+			Username : "syafiqahizzani0211@gmail.com",
+			Password : "yourpassword",
+			To : 'syafiqahizzani0211@gmail.com',
+			From : document.getElementById("email").value,
+			Subject : "New Contact Form Enquiry",
+			Body : "Name: " + document.getElementById("name").value
+			+ "<br> Email: " + document.getElementById("email").value
+			+ "<br> Phone No: " + document.getElementById("phone").value
+			+ "<br> Message: " + document.getElementById("message").value
+		}).then(
+		  message => alert("Message Sent Successfully")
+		);
+	}
+	
+</script>
+</body>
+</html>
